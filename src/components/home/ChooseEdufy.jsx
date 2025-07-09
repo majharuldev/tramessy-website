@@ -189,7 +189,7 @@ export default function ChooseEdufy() {
 ]
   return (
     <div className="container mx-auto px-6 py-12 bg-white">
-      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center md:text-left">
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">
         কেন ট্র্যামেসি কে বেছে নিবেন?
       </h1>
       <p className="text-gray-600 text-base leading-relaxed mb-12 max-w-4xl">

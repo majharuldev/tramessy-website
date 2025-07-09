@@ -224,7 +224,7 @@ export default function Banner() {
   }
 // grid lg:grid-cols-2 gap-12 lg:gap-20
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden py-20">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-teal-500"></div>
 

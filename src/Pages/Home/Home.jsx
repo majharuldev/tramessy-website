@@ -1,6 +1,9 @@
 import Banner from "../../components/home/Banner";
 import ChooseEdufy from "../../components/home/ChooseEdufy";
+import ClientList from "../../components/home/ClientList";
+import FAQSection from "../../components/home/FAQ";
 import FeaturesSection from "../../components/home/Features";
+import Review from "../../components/home/Review";
 import { useGetAllBrandQuery } from "../../redux/api/brand/brandApi";
 
 
@@ -12,6 +15,9 @@ const Home = () => {
             <Banner/>
             <FeaturesSection/>
             <ChooseEdufy/>
+            <ClientList/>
+            <FAQSection/>
+            <Review/>
         </div>
     );
 };
