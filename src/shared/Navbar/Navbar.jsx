@@ -138,7 +138,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: "হোম", href: "#", active: true },
-    { name: "ফিচার", href: "#" },
+    { name: "ফিচার", href: "/features" },
     { name: "প্যাকেজ এবং প্রাইস", href: "#" },
     { name: "রিভিউ", href: "#" },
     { name: "আমাদের সম্পর্কে", href: "#" },
@@ -172,8 +172,8 @@ export default function Navbar() {
               <a
                 key={index}
                 href={item.href}
-                className={`text-gray-700 hover:text-teal-500 transition-colors font-medium ${
-                  item.active ? "border-b-2 border-teal-500 pb-1" : ""
+                className={`text-gray-700 hover:text-primary transition-colors font-medium ${
+                  item.active ? "border-b-2 border-primary pb-1" : ""
                 }`}
               >
                 {item.name}
@@ -183,7 +183,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <button className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
+            <button className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
               ডেমো রিকুয়েস্ট
             </button>
           </div>

@@ -284,7 +284,7 @@ export default function Banner() {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button
           onClick={handleScrollDown}
-          className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center cursor-pointer hover:bg-teal-600 transition-colors"
+          className="w-10 h-10 bg-primary rounded-full flex items-center justify-center cursor-pointer hover:bg-teal-600 transition-colors"
         >
           <ArrowDown className="w-5 h-5 text-white" />
         </button>

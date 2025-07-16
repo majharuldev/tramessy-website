@@ -302,7 +302,7 @@ const featureData = {
               onClick={() => setActiveTab(tab.id)}
               className={`px-6 py-3 rounded font-medium transition-all duration-300 ${
                 activeTab === tab.id
-                  ? "bg-teal-500 text-white shadow-lg"
+                  ? "bg-primary text-white shadow-lg"
                   : "bg-white text-gray-700 hover:bg-gray-100 shadow-sm"
               }`}
             >

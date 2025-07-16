@@ -59,7 +59,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   Edufy সম্পর্কে
 //                 </a>
@@ -67,7 +67,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   হোমপেজ
 //                 </a>
@@ -75,7 +75,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   রেট / ফেস স্ট্যাটাস
 //                 </a>
@@ -90,7 +90,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   কোম্পানী সম্পর্কে
 //                 </a>
@@ -98,7 +98,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   শপ
 //                 </a>
@@ -106,7 +106,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   সেবা
 //                 </a>
@@ -114,7 +114,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   যোগাযোগ করুন
 //                 </a>
@@ -122,7 +122,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   পার্টনার
 //                 </a>
@@ -130,7 +130,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   Privacy Policy
 //                 </a>
@@ -138,7 +138,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   Terms of Service
 //                 </a>
@@ -146,7 +146,7 @@
 //               <li>
 //                 <a
 //                   href="#"
-//                   className="text-sm opacity-90 hover:opacity-100 hover:text-teal-300 transition-colors duration-200"
+//                   className="text-sm opacity-90 hover:opacity-100 hover:text-primary transition-colors duration-200"
 //                 >
 //                   Refund Policy
 //                 </a>
@@ -161,14 +161,14 @@
 //             {/* Contact Information */}
 //             <div className="space-y-4 mb-8">
 //               <div className="flex items-start space-x-3">
-//                 <Mail className="w-5 h-5 mt-0.5 text-teal-300 flex-shrink-0" />
+//                 <Mail className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
 //                 <div>
 //                   <p className="text-sm font-medium">info@edufy.cloud</p>
 //                 </div>
 //               </div>
 
 //               <div className="flex items-start space-x-3">
-//                 <Phone className="w-5 h-5 mt-0.5 text-teal-300 flex-shrink-0" />
+//                 <Phone className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
 //                 <div className="text-sm space-y-1">
 //                   <p>+880 1894-430505</p>
 //                   <p>+880 1894-430504</p>
@@ -177,7 +177,7 @@
 //               </div>
 
 //               <div className="flex items-start space-x-3">
-//                 <MapPin className="w-5 h-5 mt-0.5 text-teal-300 flex-shrink-0" />
+//                 <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
 //                 <div className="text-sm">
 //                   <p>বাজারা লা মাইকেট দে অহমেন, ছুটার #রিং,</p>
 //                   <p>ব্লক #৭১, রোড #২৭, জনপদ-০১,</p>
@@ -198,7 +198,7 @@
 //                   value={email}
 //                   onChange={(e) => setEmail(e.target.value)}
 //                   placeholder="Enter email address"
-//                   className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent"
+//                   className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
 //                   required
 //                 />
 //                 <button
@@ -218,18 +218,18 @@
 
 
 import { useState } from "react"
-import { Send, Mail, Phone, MapPin } from "lucide-react"
+import { Send, Mail, Phone, MapPin, MessageCircle } from "lucide-react"
 import carBg from "../../assets/image/carBg.jpeg"
+import whiteLogo from "../../assets/logo-2.svg"
 
 const quickLinks = [
-  "Edufy সম্পর্কে",
+  "Tramessy সম্পর্কে",
   "হোমপেজ",
   "রেট / ফেস স্ট্যাটাস"
 ]
 
 const institutionLinks = [
   "কোম্পানী সম্পর্কে",
-  "শপ",
   "সেবা",
   "যোগাযোগ করুন",
   "পার্টনার",
@@ -251,7 +251,7 @@ export default function FooterSection() {
     <footer
       className="relative text-white"
       style={{
-        backgroundImage: `linear-gradient(to bottom right, rgba(13,148,136,0.85), #11375b), url(${carBg})`, // Change path as needed
+        backgroundImage: `linear-gradient(to bottom right,  #11375b, rgba(70,150,136,0.85)), url(${carBg})`, 
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -263,24 +263,12 @@ export default function FooterSection() {
 
           {/* Company Info */}
           <div>
-            <div className="flex items-center mb-6">
-              <div className="w-10 h-10 mr-3">
-                <svg viewBox="0 0 40 40" className="w-full h-full">
-                  <rect x="2" y="2" width="36" height="36" rx="8" fill="none" stroke="currentColor" strokeWidth="2" />
-                  <rect x="8" y="8" width="8" height="8" fill="currentColor" />
-                  <rect x="20" y="8" width="8" height="8" fill="currentColor" />
-                  <rect x="8" y="20" width="8" height="8" fill="currentColor" />
-                  <rect x="20" y="20" width="8" height="8" fill="currentColor" />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold">Edufy</span>
-            </div>
+            <img src={whiteLogo} alt="" className="w-28" />
+       
 
             <div className="space-y-4 text-sm leading-relaxed opacity-90">
-              <p>Edufy, এমন একটি সফটওয়্যার যা প্রতিটি শিক্ষা প্রতিষ্ঠানকে তাদের শিক্ষক, শিক্ষার্থী এবং প্রতিষ্ঠান পরিচালনা করতে সাহায্য করে।</p>
-              <p>সর্বোচ্চ শিক্ষার্থী ও শুল্কগুলোর চাহিদা পূরণ করার জন্য আমাদের কাছে বিভিন্ন পণ্য এবং পরিষেবা রয়েছে।</p>
-              <p>Edufy শিক্ষা ব্যবস্থাপনার একটি সহজ সমাধান।</p>
-              <p className="pt-4 border-t border-white/20">হটলাইন: ০৫-৫৯১৭৫</p>
+              Tramessy সফটওয়্যারটি ট্রানসপোর্ট ব্যবসার এর আধুনিকায়নের কথা মাথায় রেখে এমন ভাবে ডিজাইন করা হয়েছে যেনো যেকোন ট্রানসপোর্ট ব্যবসায়ী তাদের দৈনন্দিন কার্যক্রম সহজেই এবং কম সময়ে পরিচালনা করতে পারেন 
+              <p className="pt-4 border-t border-white/20">হটলাইন: 09666700722</p>
             </div>
           </div>
 
@@ -290,7 +278,7 @@ export default function FooterSection() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-sm opacity-90 hover:text-teal-300 transition-colors duration-200">
+                  <a href="#" className="text-sm opacity-90 hover:text-primary transition-colors duration-200">
                     {link}
                   </a>
                 </li>
@@ -304,7 +292,7 @@ export default function FooterSection() {
             <ul className="space-y-3">
               {institutionLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-sm opacity-90 hover:text-teal-300 transition-colors duration-200">
+                  <a href="#" className="text-sm opacity-90 hover:text-primary transition-colors duration-200">
                     {link}
                   </a>
                 </li>
@@ -318,22 +306,26 @@ export default function FooterSection() {
 
             <div className="space-y-4 mb-8 text-sm">
               <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-teal-300" />
+                <Mail className="w-5 h-5 text-primary" />
                 <p>info@edufy.cloud</p>
               </div>
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-teal-300" />
+                <Phone className="w-5 h-5 text-primary" />
                 <div>
-                  <p>+880 1894-430505</p>
-                  <p>+880 1894-430504</p>
-                  <p>+880 1730-797262</p>
+                  <p>09666-700722</p>
+                  {/* <p>+880 1730-797262</p> */}
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-teal-300" />
+                <MessageCircle className="w-5 h-5 text-primary" />
                 <div>
-                  <p>বাজার লা মাইকেট দে অহমেন, রোড #২৭</p>
-                  <p>জনপদ-০১, ঢাকা-১২১২</p>
+                  <p>+880 1627-355382</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-primary" />
+                <div>
+                  <p>হাউস-১৮, রোড-৩, নিকুঞ্জ-২, খিলক্ষেত, ঢাকা, বাংলাদেশ</p>
                 </div>
               </div>
             </div>
@@ -346,12 +338,12 @@ export default function FooterSection() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="আপনার ইমেইল"
-                className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-300"
+                className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-teal-500 hover:bg-teal-600 rounded-r-lg transition-colors duration-200"
+                className="px-6 py-3 bg-primary hover:bg-primary/80 rounded-r-lg transition-colors duration-200"
               >
                 <Send className="w-5 h-5" />
               </button>
