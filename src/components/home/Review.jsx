@@ -207,14 +207,14 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import clientImage from "../../assets/image/No_Image_Available.jpg"
-
+import clientImage1 from "../../assets/image/MH.png"
+import clientImage2 from "../../assets/image/mohammed_jayed_hassan.jpg"
 const testimonials = [
   {
     id: 1,
     name: "Nawshad Ahmed",
     designation: "MHR Freight, Chittagong",
-    image: "/placeholder.svg?height=80&width=80", 
+    image: clientImage1 , 
     testimonial:
       "আমরা আগে আলাদা আলাদা খাতায়, প্রতিদিনের ইনকাম, খরচ, ড্রাইভারদের ভ্রমণের কাস্টমার ডিউটি আলাদা আলাদা লিখে রাখতাম। ট্রামেসি সফটওয়্যার ব্যবহার করার পর সব তথ্য এক সফটওয়্যারেই পাচ্ছি। সবচেয়ে ভালো লাগে, অটোমেটিক রিপোর্ট তৈরি হয় ক্লিকেই কিন্তু ডাউনলোডও করা যায়। এগুলো “আমাদের দেশের ট্রান্সপোর্ট ব্যবসা যেমন চলে” তার জন্য যেমন ম্যানেজমেন্ট, ডিউটি অ্যাসাইনমেন্ট, চালান, বিল তৈরি—সবকিছুই ফিচারেই আছে।"
   },
@@ -222,33 +222,31 @@ const testimonials = [
     id: 2,
     name: "Mohammed Jayed Hassan",
     designation: "Proprietor, H K Logistics",
-    image: "/placeholder.svg?height=80&width=80",
+    image: clientImage2,
     testimonial:
       "ট্রামেসি সফটওয়্যার ব্যবহারের পর থেকে আমাদের পরিবহন পরিচালনায় অনেক গতি এসেছে। গাড়ির বুকিং, ইনকাম-এক্সপেন্স রিপোর্ট—সবকিছু এক ক্লিকে পাচ্ছি। ব্যবহার সহজ, টিমের সাপোর্টও চমৎকার। যারা প্রকল্পভিত্তিক তাদের পরিবহন ব্যবসা ম্যানেজ করতে চান, তাদের জন্য ট্রামেসি একটি অসাধারণ সমাধান।"
   },
-  {
+ {
     id: 3,
-    name: "মোহাম্মদ আলী",
-    designation: "অধ্যক্ষ",
-    institution: "ঢাকা আইডিয়াল কলেজ",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "Nawshad Ahmed",
+    designation: "MHR Freight, Chittagong",
+    image: clientImage1 , 
     testimonial:
-      "ট্রামেসি সফটওয়্যার ব্যবহারের পর থেকে আমাদের পরিবহন পরিচালনায় অনেক গতি এসেছে। গাড়ির বুকিং, ইনকাম-এক্সপেন্স রিপোর্ট—সবকিছু এক ক্লিকে পাচ্ছি। ব্যবহার সহজ, টিমের সাপোর্টও চমৎকার। যারা প্রকল্পভিত্তিক তাদের পরিবহন ব্যবসা ম্যানেজ করতে চান, তাদের জন্য ট্রামেসি একটি অসাধারণ সমাধান।",
+      "আমরা আগে আলাদা আলাদা খাতায়, প্রতিদিনের ইনকাম, খরচ, ড্রাইভারদের ভ্রমণের কাস্টমার ডিউটি আলাদা আলাদা লিখে রাখতাম। ট্রামেসি সফটওয়্যার ব্যবহার করার পর সব তথ্য এক সফটওয়্যারেই পাচ্ছি। সবচেয়ে ভালো লাগে, অটোমেটিক রিপোর্ট তৈরি হয় ক্লিকেই কিন্তু ডাউনলোডও করা যায়। এগুলো “আমাদের দেশের ট্রান্সপোর্ট ব্যবসা যেমন চলে” তার জন্য যেমন ম্যানেজমেন্ট, ডিউটি অ্যাসাইনমেন্ট, চালান, বিল তৈরি—সবকিছুই ফিচারেই আছে।"
   },
   {
     id: 4,
-    name: "ফাতেমা খাতুন",
-    designation: "সহকারী প্রধান শিক্ষক",
-    institution: "রাজশাহী সরকারি বালিকা উচ্চ বিদ্যালয়",
-    image: "/placeholder.svg?height=80&width=80",
+    name: "Mohammed Jayed Hassan",
+    designation: "Proprietor, H K Logistics",
+    image: clientImage2,
     testimonial:
-      "আমরা আগে আলাদা আলাদা খাতায়, প্রতিদিনের ইনকাম, খরচ, ড্রাইভারদের ভ্রমণের কাস্টমার ডিউটি আলাদা আলাদা লিখে রাখতাম। ট্রামেসি সফটওয়্যার ব্যবহার করার পর সব তথ্য এক সফটওয়্যারেই পাচ্ছি। সবচেয়ে ভালো লাগে, অটোমেটিক রিপোর্ট তৈরি হয় ক্লিকেই কিন্তু ডাউনলোডও করা যায়। এগুলো “আমাদের দেশের ট্রান্সপোর্ট ব্যবসা যেমন চলে” তার জন্য যেমন ম্যানেজমেন্ট, ডিউটি অ্যাসাইনমেন্ট, চালান, বিল তৈরি—সবকিছুই ফিচারেই আছে।",
+      "ট্রামেসি সফটওয়্যার ব্যবহারের পর থেকে আমাদের পরিবহন পরিচালনায় অনেক গতি এসেছে। গাড়ির বুকিং, ইনকাম-এক্সপেন্স রিপোর্ট—সবকিছু এক ক্লিকে পাচ্ছি। ব্যবহার সহজ, টিমের সাপোর্টও চমৎকার। যারা প্রকল্পভিত্তিক তাদের পরিবহন ব্যবসা ম্যানেজ করতে চান, তাদের জন্য ট্রামেসি একটি অসাধারণ সমাধান।"
   },
 ]
 
 export default function Review() {
   return (
-    <div className="container mx-auto px-6 py-16">
+    <div className="container mx-auto px-6 py-16" id="review">
       <div className="text-center mb-16">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">গ্রাহকদের অভিজ্ঞতা</h2>
         <p className="text-gray-600 text-md leading-relaxed max-w-3xl mx-auto">
@@ -280,7 +278,7 @@ export default function Review() {
               <div className="flex items-center mb-6 relative z-10">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
                   <img
-                    src={clientImage || "/placeholder.svg"}
+                    src={testimonial?.image || "/placeholder.svg"}
                     alt={testimonial.name}
                     className="w-full h-full object-cover"
                   />

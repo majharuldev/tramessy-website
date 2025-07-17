@@ -225,15 +225,15 @@ export default function FAQSection() {
           {/* Left Column */}
           <div className="space-y-6">
             {leftColumnItems.map((item) => (
-              <div key={item.id} className="bg-teal-50 p-4 rounded-md shadow-sm">
+              <div key={item.id} className="bg-white p-4 rounded-md shadow-sm">
                 <button
                   onClick={() => toggleItem(item.id)}
                   className="w-full flex items-start justify-between text-left group"
                 >
                   <div className="flex items-start space-x-4 flex-1">
-                    <span className="text-md font-semibold text-gray-400 mt-1">
+                    {/* <span className="text-md font-semibold text-gray-400 mt-1">
                       {item.id.toString().padStart(2, "0")}
-                    </span>
+                    </span> */}
                     <h3 className="text-md font-semibold text-gray-800 group-hover:text-gray-600 transition-colors duration-200 flex-1">
                       {item.question}
                     </h3>
@@ -259,15 +259,15 @@ export default function FAQSection() {
           {/* Right Column */}
           <div className="space-y-6">
             {rightColumnItems.map((item) => (
-              <div key={item.id} className="bg-teal-50 p-4 rounded-md shadow-sm">
+              <div key={item.id} className="bg-white p-4 rounded-md shadow-sm">
                 <button
                   onClick={() => toggleItem(item.id)}
                   className="w-full flex items-start justify-between text-left group"
                 >
                   <div className="flex items-start space-x-4 flex-1">
-                    <span className="text-md font-semibold text-gray-400 mt-1">
+                    {/* <span className="text-md font-semibold text-gray-400 mt-1">
                       {item.id.toString().padStart(2, "0")}
-                    </span>
+                    </span> */}
                     <h3 className="text-md font-semibold text-gray-800 group-hover:text-gray-600 transition-colors duration-200 flex-1">
                       {item.question}
                     </h3>

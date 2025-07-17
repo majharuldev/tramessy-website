@@ -131,20 +131,22 @@
 import { useState, useEffect } from "react"
 import { ChevronDown, Menu, X } from "lucide-react"
 import logo from "../../assets/logo.svg"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const navItems = [
-    { name: "হোম", href: "#", active: true },
-    { name: "ফিচার", href: "/features" },
-    { name: "প্যাকেজ এবং প্রাইস", href: "#" },
-    { name: "রিভিউ", href: "#" },
-    { name: "আমাদের সম্পর্কে", href: "#" },
-    { name: "যোগাযোগ", href: "#" },
-  ]
-
+  { name: "হোম", href: "/", type: "link" },
+  { name: "ফিচার", href: "/features", type: "link" },
+  { name: "প্যাকেজ এবং প্রাইস", href: "/package-pricing", type: "link" },
+  { name: "রিভিউ", href: "review", type: "scroll" }, 
+  { name: "যোগাযোগ", href: "/contact-us", type: "link" },
+]
+// navbar window scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -152,6 +154,31 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // routing/scroll
+   const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleClick = (item) => {
+    if (item.type === "scroll") {
+      if (location.pathname === "/") {
+        // যদি হোমেই থাকি, সরাসরি স্ক্রল করব
+        scrollToSection(item.href);
+      } else {
+        // অন্য পেজে থাকলে আগে হোমে গিয়ে তারপর স্ক্রল করাবো
+        navigate("/");
+        setTimeout(() => {
+          scrollToSection(item.href);
+        }, 500); // ডিলে দিতে হবে যাতে হোমে যাওয়ার সময় স্ক্রল মিস না হয়
+      }
+    } else {
+      navigate(item.href);
+    }
+  };
 
   return (
     <header
@@ -163,22 +190,22 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="">
-            <img src={logo} alt="tramessy logo" style={{ height: "30px" }} />
+            <Link to="/"><img src={logo} alt="tramessy logo" style={{ height: "30px" }} /></Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                className={`text-gray-700 hover:text-primary transition-colors font-medium ${
-                  item.active ? "border-b-2 border-primary pb-1" : ""
-                }`}
-              >
-                {item.name}
-              </a>
-            ))}
+        <button
+          key={index}
+          onClick={() => handleClick(item)}
+          className={`text-gray-700 hover:text-primary transition-colors font-medium ${
+            location.pathname === item.href ? "border-b-2 border-primary pb-1 " : ""
+          }`}
+        >
+          {item.name}
+        </button>
+      ))}
           </nav>
 
           {/* CTA Button */}
@@ -200,21 +227,21 @@ export default function Navbar() {
         <div className="lg:hidden bg-white border-t shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="text-gray-700 hover:text-teal-500 transition-colors font-medium"
-                >
-                  {item.name}
-                </a>
-              ))}
-              <a href="#" className="text-gray-700 hover:text-teal-500 transition-colors font-medium">
-                আরো
-              </a>
-              <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg transition-colors w-full font-medium">
-                ডেমো রিকুয়েস্ট
-              </button>
+             {navItems.map((item, index) => (
+        <button
+          key={index}
+          onClick={() => handleClick(item)}
+          className={`text-gray-700 hover:text-primary transition-colors font-medium ${
+            location.pathname === item.href ? "text-primary font-semibold" : ""
+          }`}
+        >
+          {item.name}
+        </button>
+      ))}
+              
+               <button className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
+              ডেমো রিকুয়েস্ট
+            </button>
             </nav>
           </div>
         </div>

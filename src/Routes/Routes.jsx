@@ -3,6 +3,9 @@ import Main from "../Layout/Main/Main";
 import Home from "../Pages/Home/Home";
 import NotFound from "../NotFound/NotFound";
 import Features from "../Pages/Features/Features";
+import PackagePricing from "../Pages/PackagePricing/PackagePricing";
+import About from "../Pages/About/About";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +25,18 @@ const router = createBrowserRouter([
         path: "/features",
         element: <Features />,
       },
+      {
+        path: "/package-pricing",
+        element: <PackagePricing />,
+      },
+      {
+        path: "/about-us",
+        element: <About/>
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs/>
+      }
     ],
   },
   // {

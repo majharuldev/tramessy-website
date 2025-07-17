@@ -8,6 +8,8 @@ import nalitabari from "../../assets/logo/nalitabari-logo.png"
 import truckSeba from "../../assets/logo/truck-seba-logo.jpg"
 import hkLogistices from "../../assets/logo/hk-logistics-logo.jpg"
 import bus from "../../assets/logo/bus-logo.png"
+import parkline from "../../assets/logo/parkline-logo.png"
+import laksham from "../../assets/logo/laksham.png"
 
 const company = [
   {
@@ -33,8 +35,8 @@ const company = [
   },
   {
     id: 4,
-    name: "Fun Bird",
-    logo: bus,
+    name: "Laksham",
+    logo: laksham,
     bgColor: "bg-gray-900",
     borderColor: "border-gray-700",
   },
@@ -61,6 +63,13 @@ const company = [
   },
   {
     id: 8,
+    name: "Parkline",
+    logo: parkline,
+    bgColor: "bg-gray-900",
+    borderColor: "border-gray-700",
+  },
+  {
+    id: 9,
     name: "Fun Bird",
     logo: bus,
     bgColor: "bg-gray-900",
@@ -73,8 +82,8 @@ export default function ClientList() {
     <div className="container px-6 py-16 mx-auto">
       {/* Main Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-xl md:text-3xl lg:text-3xl font-bold text-gray-700 leading-snug">
-          বাংলাদেশের ৪০+ প্রতিষ্ঠান তাদের প্রতিষ্ঠান <br />
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 leading-snug">
+          বাংলাদেশের 15+ প্রতিষ্ঠান তাদের প্রতিষ্ঠান <br />
           পরিচালনার জন্য নিয়মিত ব্যবহার করছে{" "}
           <span className="text-primary">Tramessy</span>
         </h2>
