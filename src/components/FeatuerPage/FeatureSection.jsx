@@ -34,6 +34,7 @@ import {
 } from "lucide-react"
 import FeatureCard from "./FeatureCard"
 import img from "../../assets/image/tramessy-feature.jpg"
+import { useInView } from "../../shared/hooks/UseInView"
 
 // Mapping feature titles to Lucide React icons
 const iconMap = {
@@ -212,11 +213,23 @@ const whyTramessyFeatures = [
   },
 ];
 
+// features
+const features = [
+  'ক্লায়েন্ট ও ড্রাইভারদের জন্য আলাদা লগইন প্যানেল।',
+  'রিয়েল-টাইম ট্রিপ আপডেট ও ট্র্যাকিং সিস্টেম।',
+  'ইনভয়েস ও রিসিপ্ট অটোমেটেড জেনারেশন এবং ডাউনলোড সুবিধা।',
+  'ওয়েবভিত্তিক রিপোর্টিং সিস্টেম (ট্রিপ, ব্যালেন্স, ড্রাইভার পারফরম্যান্স)।',
+  'নিজস্ব ডোমেইন ও ব্র্যান্ডিংসহ হোস্টিং সুবিধা।',
+  'দ্রুত লোডিং, মোবাইল-ফ্রেন্ডলি ও SEO অপ্টিমাইজড ওয়েবপোর্টাল।',
+  'ব্যবহারকারী ও রোল-ভিত্তিক অ্যাক্সেস কন্ট্রোল।',
+];
+
 
 const FeaturesSection = () => {
+  const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto ">
+      <div ref={sectionRef}  className="container mx-auto ">
         {/* Top Navigation/Tabs */}
         {/* <div className="flex justify-center mb-12 border-b-2 border-gray-200">
           <div className="flex space-x-8">
@@ -244,7 +257,7 @@ const FeaturesSection = () => {
         </div> */}
 
         {/* Main Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {tramessyFeatures.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -252,16 +265,20 @@ const FeaturesSection = () => {
               iconName={iconMap[feature.title] ? iconMap[feature.title].displayName : "HelpCircle"} 
               title={feature.title}
               description={feature.description}
+              isSectionInView={isSectionInView
+
+              }
             />
           ))}
         </div>
 
         {/* Website Features Section */}
         <div className="bg-white py-12">
-  <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+  <div ref={sectionRef} className="flex flex-col lg:flex-row items-center justify-between gap-12">
     {/* Left Content */}
-    <div className="flex-1 text-center lg:text-left max-w-2xl animate-fade-in-right">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-feature-icon inline-block pb-2">
+    <div className={`flex-1 text-center lg:text-left max-w-2xl ${isSectionInView ? "animate-fade-up" : ""}`}>
+      <div>
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b-2 border-feature-icon inline-block pb-2">
         ট্র্যামেসি ওয়েবপোর্টালের ফিচারসমূহ
       </h2>
       <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -269,40 +286,24 @@ const FeaturesSection = () => {
         ম্যানেজমেন্ট সবাই রিয়েল-টাইমে তথ্য দেখতে ও কন্ট্রোল করতে পারে। প্রতিষ্ঠানভিত্তিক কাস্টমাইজড ওয়েবসাইট ও কাস্টম ড্যাশবোর্ডের মাধ্যমে আপনি আপনার
         প্রতিষ্ঠানের ট্রিপ, ড্রাইভার, যানবাহন এবং ইনকাম-এক্সপেন্স সবকিছু এক নজরে দেখতে পারবেন।
       </p>
-      <ul className="text-gray-700 text-lg space-y-3 text-left">
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>ক্লায়েন্ট ও ড্রাইভারদের জন্য আলাদা লগইন প্যানেল।</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>রিয়েল-টাইম ট্রিপ আপডেট ও ট্র্যাকিং সিস্টেম।</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>ইনভয়েস ও রিসিপ্ট অটোমেটেড জেনারেশন এবং ডাউনলোড সুবিধা।</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>ওয়েবভিত্তিক রিপোর্টিং সিস্টেম (ট্রিপ, ব্যালেন্স, ড্রাইভার পারফরম্যান্স)।</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>নিজস্ব ডোমেইন ও ব্র্যান্ডিংসহ হোস্টিং সুবিধা।</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>দ্রুত লোডিং, মোবাইল-ফ্রেন্ডলি ও SEO অপ্টিমাইজড ওয়েবপোর্টাল।</span>
-        </li>
-        <li className="flex items-start gap-2">
-          <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-          <span>ব্যবহারকারী ও রোল-ভিত্তিক অ্যাক্সেস কন্ট্রোল।</span>
-        </li>
-      </ul>
+      </div>
+      <ul ref={sectionRef} className="text-gray-700 text-lg space-y-3 text-left">
+  {features.map((item, index) => (
+    <li
+      key={index}
+      className={`flex items-start gap-2 ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`}
+      style={{ animationDelay: isSectionInView ? `${0.4 + index * 0.1}s` : "0s" }}
+    >
+      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+      <span>{item}</span>
+    </li>
+  ))}
+</ul>
+
     </div>
 
     {/* Right Illustration */}
-    <div className="flex-1 flex justify-center lg:justify-end animate-fade-in-left">
+    <div className={`flex-1 flex justify-center lg:justify-end ${isSectionInView ? "animate-fade-in-left" : ""}`}>
       <img
         src={img}
         alt="Tramessy web portal screenshot"
@@ -315,17 +316,26 @@ const FeaturesSection = () => {
 
 
         {/* Why tramessy Section */}
-        <div className="py-16">
+        <div ref={sectionRef} className="py-16">
           <h2 className="animate-fade-up text-2xl md:text-3xl font-bold text-gray-800 text-center mb-12 border-b-2 border-feature-icon inline-block pb-2">
             কেন ট্র্যামেসি প্রয়োজন
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyTramessyFeatures.map((feature, index) => {
               const IconComponent = feature.icon
+              // Determine row number (assuming 4 items per row)
+    const row = Math.floor(index / 4);
+
+    // Apply animation based on row
+    let animationClass = '';
+    if (row === 0) animationClass = 'animate-fade-up';
+    else if (row === 1) animationClass = 'animate-fade-in-right';
+    else if (row === 2) animationClass = 'animate-fade-in-left';
+    else animationClass = 'animate-fade-up';
               return (
                 <div
                   key={index}
-                  className="animate-fade-up bg-white rounded-lg shadow-sm p-6 border border-feature-border flex flex-col items-center text-center"
+                  className={`${animationClass} bg-white rounded-lg shadow-sm p-6 border border-feature-border flex flex-col items-center text-center`}
                 >
                   <div className="mb-4">
                     {IconComponent && <IconComponent className="w-12 h-12 text-feature-icon text-primary" />}

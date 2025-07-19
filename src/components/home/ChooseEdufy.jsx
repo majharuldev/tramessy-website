@@ -100,9 +100,11 @@
 // }
 
 import { Cloud, Settings, Building2, FileText, PlayCircle, ShieldCheck, RefreshCcw, Headset } from "lucide-react"
+import { useInView } from "../../shared/hooks/UseInView"
 
 
 export default function ChooseEdufy() {
+     const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
     const features = [
   {
     icon: Cloud,
@@ -188,11 +190,11 @@ export default function ChooseEdufy() {
   }
 ]
   return (
-    <div className="container mx-auto px-6 py-12 bg-white">
-      <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">
+    <div ref={sectionRef} className="container mx-auto px-6 py-12 bg-white">
+      <h1 className={`text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center md:text-left ${isSectionInView ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>
         কেন ট্র্যামেসি কে বেছে নিবেন?
       </h1>
-      <p className="text-gray-600 text-base leading-relaxed mb-12 max-w-4xl">
+      <p className={`text-gray-600 text-base leading-relaxed mb-12 max-w-4xl ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>
         Tramessy একটি আধুনিক ক্লাউড-ভিত্তিক ট্রান্সপোর্ট ম্যানেজমেন্ট সফটওয়্যার, যা বাস, ট্রাক, ভাড়া গাড়ি, কুরিয়ার বা SME পরিবহন ব্যবসা সহজে ও কার্যকরভাবে পরিচালনায় সহায়তা করে। এটি এমনভাবে ডিজাইন করা হয়েছে, যাতে আপনি যেকোনো সময়, যেকোনো জায়গা থেকে আপনার মোবাইল বা কম্পিউটার ব্যবহার করে ব্যবসা পর্যবেক্ষণ ও নিয়ন্ত্রণ করতে পারেন। ব্যবহারবান্ধব ইন্টারফেস এবং স্বয়ংক্রিয় রিপোর্টিং ফিচারের কারণে প্রযুক্তি সম্পর্কে কম জ্ঞান থাকলেও যে কেউ সহজেই এটি ব্যবহার করতে পারেন।
       </p>
 
@@ -200,7 +202,7 @@ export default function ChooseEdufy() {
         {features.map((item, index) => {
           const Icon = item.icon
           return (
-            <div key={index} className="text-center">
+            <div key={index} className={`text-center ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? `${0.4 + index * 0.1}s` : "0s" }}>
               <div className={`w-20 h-20 mx-auto mb-4 ${item.bgColor} rounded-full flex items-center justify-center`}>
                 <div className="relative">
                   <Icon className={`w-10 h-10 ${item.iconColor}`} />

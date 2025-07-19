@@ -10,6 +10,7 @@ import hkLogistices from "../../assets/logo/hk-logistics-logo.jpg"
 import bus from "../../assets/logo/bus-logo.png"
 import parkline from "../../assets/logo/parkline-logo.png"
 import laksham from "../../assets/logo/laksham.png"
+import { useInView } from "../../shared/hooks/UseInView"
 
 const company = [
   {
@@ -78,11 +79,12 @@ const company = [
 ]
 
 export default function ClientList() {
+  const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
   return (
-    <div className="container px-6 py-16 mx-auto">
+    <div className="container px-6 py-16 mx-auto" id="partner">
       {/* Main Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 leading-snug">
+      <div ref={sectionRef} className="text-center mb-12">
+        <h2 className={`text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 leading-snug ${isSectionInView ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }} >
           বাংলাদেশের 15+ প্রতিষ্ঠান তাদের প্রতিষ্ঠান <br />
           পরিচালনার জন্য নিয়মিত ব্যবহার করছে{" "}
           <span className="text-primary">Tramessy</span>

@@ -26,8 +26,10 @@ import {
   ShieldCheckIcon,
 
 } from "lucide-react";
+import { useInView } from "../../shared/hooks/UseInView";
 
 export default function FeaturesSection() {
+  const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
     const tabs = [
     { id: "ট্রাক/কভার্ড ভ্যান", name: "ট্রাক/কভার্ড ভ্যান" },
     { id: "রেন্ট এ কার", name: "রেন্ট এ কার" },
@@ -285,17 +287,21 @@ const featureData = {
 
   return (
     <section className="py-20 ">
-      <div className="container mx-auto px-4">
+      <div ref={sectionRef} className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-2xl lg:text-3xl font-bold text-gray-700 mb-6">যে সকল ট্রান্সপোর্ট  ব্যবসা প্রতিষ্ঠানের জন্য <span className="text-primary">ট্র্যামেসি</span> প্রযোজ্য</h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <h2 className={`text-2xl lg:text-3xl font-bold text-gray-700 mb-6 ${isSectionInView ? "animate-fade-up" : "opacity-0"}`}>যে সকল ট্রান্সপোর্ট  ব্যবসা প্রতিষ্ঠানের জন্য <span className="text-primary">ট্র্যামেসি</span> প্রযোজ্য</h2>
+          <p className={`text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`}
+          style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}
+          >
             আপনার ট্রান্সপোর্ট  ব্যবসা প্রতিষ্ঠান যেমন ই হোক, ব্যবসায়িক কার্যক্রম দ্রুত এবং দক্ষতার সাথে ডিজিটাল উপায়ে পরিচালনার জন্য আপনার সাথে রয়েছে ট্র্যামেসি
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className={`flex flex-wrap justify-center gap-2 mb-12 ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`}
+        style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}
+        >
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -314,14 +320,15 @@ const featureData = {
       </div>
       <div className="bg-teal-50">
         {/* Content Grid */}
-        <div className="container mx-auto grid lg:grid-cols-3 gap-5 items-start py-16">
+        <div ref={sectionRef} className="container mx-auto grid lg:grid-cols-3 gap-5 items-start py-16">
           {/* Features Grid */}
           <div className="lg:col-span-2">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-md p-4 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 group flex items-center gap-2"
+                  className={`bg-white rounded-md p-4 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 group flex items-center gap-2 ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`}
+                  style={{ animationDelay: isSectionInView ? `${0.4 + index * 0.1}s` : "0s" }}
                 >
                   <div
                     className={`p-1.5 ${feature.bgColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
@@ -337,8 +344,8 @@ const featureData = {
           </div>
 
           {/* Content Text */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-md p-6 shadow-sm">
+          <div className={`lg:col-span-1 ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`}>
+            <div className={`bg-white rounded-md p-6 shadow-sm`}>
               <h3 className="text-xl font-bold text-gray-800 mb-4">{contentTitle}</h3>
               <p className="text-gray-600 leading-relaxed text-justify">{contentText}</p>
             </div>

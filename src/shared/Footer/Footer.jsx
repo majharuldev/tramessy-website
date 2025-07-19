@@ -221,22 +221,24 @@ import { useState } from "react"
 import { Send, Mail, Phone, MapPin, MessageCircle } from "lucide-react"
 import carBg from "../../assets/image/carBg.jpeg"
 import whiteLogo from "../../assets/logo-2.svg"
+import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 
 const quickLinks = [
-  "Tramessy সম্পর্কে",
-  "হোমপেজ",
-  "রেট / ফেস স্ট্যাটাস"
-]
+  { name: "Tramessy সম্পর্কে", path: "/about-us" },
+  { name: "হোম", path: "/" },
+  { name: "প্যাকেজ এবং প্রাইস", path: "/package-pricing" },
+];
 
 const institutionLinks = [
-  "কোম্পানী সম্পর্কে",
-  "সেবা",
-  "যোগাযোগ করুন",
-  "পার্টনার",
-  "Privacy Policy",
-  "Terms of Service",
-  "Refund Policy"
-]
+  { name: "কোম্পানী সম্পর্কে", type:"page", path: "/about-us" },
+  { name: "সেবা", type:"section", path: "/about-us#service" },
+  { name: "যোগাযোগ করুন", type:"page", path: "/contact-us" },
+  { name: "পার্টনার", type:"section", path: "/#partner" },
+  { name: "Privacy Policy", type:"page", path: "/privacy-policy" },
+  { name: "Terms of Service", type:"page", path: "/terms-of-service" },
+  { name: "Refund Policy", type:"page", path: "/refund-policy" },
+];
 
 export default function FooterSection() {
   const [email, setEmail] = useState("")
@@ -278,9 +280,11 @@ export default function FooterSection() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-sm opacity-90 hover:text-primary transition-colors duration-200">
-                    {link}
-                  </a>
+                  <Link to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200"onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -292,9 +296,14 @@ export default function FooterSection() {
             <ul className="space-y-3">
               {institutionLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-sm opacity-90 hover:text-primary transition-colors duration-200">
-                    {link}
-                  </a>
+                 { link.type === "section" ? (
+                   <HashLink smooth to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200">
+                    {link.name}
+                  </HashLink>
+                 )
+                 :( <Link to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200">
+                    {link.name}
+                  </Link>)}
                 </li>
               ))}
             </ul>
@@ -306,24 +315,24 @@ export default function FooterSection() {
 
             <div className="space-y-4 mb-8 text-sm">
               <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <p>info@edufy.cloud</p>
+                <Mail className="w-5 h-5 text-teal-500" />
+                <p>bmstechlogistics@gmail.com</p>
               </div>
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-primary" />
+                <Phone className="w-5 h-5 text-teal-500" />
                 <div>
                   <p>09666-700722</p>
                   {/* <p>+880 1730-797262</p> */}
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MessageCircle className="w-5 h-5 text-primary" />
+                <MessageCircle className="w-5 h-5 text-teal-500" />
                 <div>
                   <p>+880 1627-355382</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary" />
+                <MapPin className="w-5 h-5 text-teal-500" />
                 <div>
                   <p>হাউস-১৮, রোড-৩, নিকুঞ্জ-২, খিলক্ষেত, ঢাকা, বাংলাদেশ</p>
                 </div>
@@ -338,7 +347,7 @@ export default function FooterSection() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="আপনার ইমেইল"
-                className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
               />
               <button

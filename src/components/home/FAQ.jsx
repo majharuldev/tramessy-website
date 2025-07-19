@@ -149,6 +149,7 @@
 
 import { useState } from "react"
 import { Plus, Minus } from "lucide-react"
+import { useInView } from "../../shared/hooks/UseInView"
 
 const faqData = [
   {
@@ -199,6 +200,7 @@ const faqData = [
 
 export default function FAQSection() {
   const [openItem, setOpenItem] = useState(null)
+  const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
 
   const toggleItem = (id) => {
     setOpenItem(prev => (prev === id ? null : id))
@@ -209,9 +211,9 @@ export default function FAQSection() {
 
   return (
     <div className="">
-      <div className="container mx-auto px-6 py-16">
+      <div ref={sectionRef} className="container mx-auto px-6 py-16">
         {/* Header Section */}
-        <div className="text-center mb-12">
+        <div className={`text-center mb-12 ${isSectionInView ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">প্রায়শই জিজ্ঞাসিত প্রশ্ন গুলো -</h2>
           <p className="text-gray-600 text-md leading-relaxed max-w-3xl mx-auto">
             আমাদের গ্রাহকদের জন্য প্রয়োজনীয় দিকগুলোর সম্পর্কে ধারণা যা আমাদের সেবা সম্পর্কে
@@ -224,8 +226,8 @@ export default function FAQSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Left Column */}
           <div className="space-y-6">
-            {leftColumnItems.map((item) => (
-              <div key={item.id} className="bg-white p-4 rounded-md shadow-sm">
+            {leftColumnItems.map((item, index) => (
+              <div key={item.id} className={`bg-white p-4 rounded-md shadow-sm ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? `${0.4 + index * 0.1}s` : "0s" }}>
                 <button
                   onClick={() => toggleItem(item.id)}
                   className="w-full flex items-start justify-between text-left group"
@@ -258,8 +260,8 @@ export default function FAQSection() {
 
           {/* Right Column */}
           <div className="space-y-6">
-            {rightColumnItems.map((item) => (
-              <div key={item.id} className="bg-white p-4 rounded-md shadow-sm">
+            {rightColumnItems.map((item, index) => (
+              <div key={item.id} className={`bg-white p-4 rounded-md shadow-sm ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? `${0.4 + index * 0.1}s` : "0s" }}>
                 <button
                   onClick={() => toggleItem(item.id)}
                   className="w-full flex items-start justify-between text-left group"

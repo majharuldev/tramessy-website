@@ -144,6 +144,7 @@ export default function Navbar() {
   { name: "ফিচার", href: "/features", type: "link" },
   { name: "প্যাকেজ এবং প্রাইস", href: "/package-pricing", type: "link" },
   { name: "রিভিউ", href: "review", type: "scroll" }, 
+  { name: "আমাদের সম্পর্কে", href: "/about-us", type: "link" }, 
   { name: "যোগাযোগ", href: "/contact-us", type: "link" },
 ]
 // navbar window scroll

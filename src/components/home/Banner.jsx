@@ -189,9 +189,11 @@ import { ArrowDown } from "lucide-react"
 import dekstopImage from "../../assets/image/truck-seba-dash-dekstop.png"
 import smallImage from "../../assets/image/mobile.png"
 import { useEffect, useRef, useState } from "react";
+import { useInView } from "../../shared/hooks/UseInView";
 
 export default function Banner() {
   const imageRef = useRef(null);
+   const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -231,10 +233,10 @@ export default function Banner() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-center">
           {/* Left Content */}
-          <div className="text-white space-y-8 animate-fade-in-up md:w-[50%]">
-            <h1 className="text-2xl lg:text-4xl font-bold leading-tight">{heroContent.title}</h1>
+          <div ref={sectionRef} className="text-white space-y-8 animate-fade-in-up md:w-[50%]">
+            <h1 className={`text-2xl lg:text-4xl font-bold leading-tight ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>{heroContent.title}</h1>
 
-            <p className="text-sm lg:text-md text-white/90 leading-relaxed">{heroContent.description}</p>
+            <p className={`text-sm lg:text-md text-white/90 leading-relaxed ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>{heroContent.description}</p>
 
             <button className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-lg text-sm text-md font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2 group">
               <span>{heroContent.ctaText}</span>

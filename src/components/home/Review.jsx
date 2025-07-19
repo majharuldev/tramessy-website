@@ -209,6 +209,7 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import clientImage1 from "../../assets/image/MH.png"
 import clientImage2 from "../../assets/image/mohammed_jayed_hassan.jpg"
+import { useInView } from "../../shared/hooks/UseInView"
 const testimonials = [
   {
     id: 1,
@@ -245,11 +246,12 @@ const testimonials = [
 ]
 
 export default function Review() {
+  const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
   return (
-    <div className="container mx-auto px-6 py-16" id="review">
+    <div ref={sectionRef} className="container mx-auto px-6 py-16" id="review">
       <div className="text-center mb-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">গ্রাহকদের অভিজ্ঞতা</h2>
-        <p className="text-gray-600 text-md leading-relaxed max-w-3xl mx-auto">
+        <h2 className={`text-2xl md:text-3xl font-bold text-gray-800 mb-6 ${isSectionInView ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>গ্রাহকদের অভিজ্ঞতা</h2>
+        <p className={`text-gray-600 text-md leading-relaxed max-w-3xl mx-auto ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>
           আমাদের গুরুত্বপূর্ণ গ্রাহক যারা তাদের অভিজ্ঞতা শেয়ার করেছেন। আপনাদের সময় এর সাথে
           <br />
           এগিয়ে যেতে পাশে থেকে সাহায্য করাই আমাদের অগ্রাধিকার।

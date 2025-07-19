@@ -6,6 +6,9 @@ import Features from "../Pages/Features/Features";
 import PackagePricing from "../Pages/PackagePricing/PackagePricing";
 import About from "../Pages/About/About";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import RefundsPolicy from "../Pages/RefundPolicy/RefundPolicy";
+import PrivacyPolicy from "../Pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "../Pages/TermsOfService/TermsOfService";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +39,18 @@ const router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactUs/>
+      },
+      {
+        path: "/refund-policy",
+        element: <RefundsPolicy/>
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy/>
+      },
+      {
+        path: "/terms-of-service",
+        element: <TermsOfService/>
       }
     ],
   },
