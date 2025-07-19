@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import { Check } from "lucide-react";
 import { useInView } from "../../shared/hooks/UseInView";
+import { Link } from "react-router-dom";
 
 const PricingCard = ({ 
   title, 
@@ -62,6 +63,7 @@ const PricingCard = ({
           ))}
         </ul>
         
+        <Link to="/contact-us">
         <Button 
           className={`w-full py-3 font-semibold transition-all duration-300 ${
             isPopular
@@ -71,6 +73,7 @@ const PricingCard = ({
         >
           {buttonText}
         </Button>
+        </Link>
       </div>
     </div>
   );

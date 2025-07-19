@@ -3,7 +3,7 @@ import PageHero from "../../components/helpingComp/PageHero";
 
 const Features = () => {
     const breadcrumbs = [
-    { label: "Home", href: "/" },
+    { label: "হোম", href: "/" },
     { label: "ফিচার" }, 
   ]
     return (

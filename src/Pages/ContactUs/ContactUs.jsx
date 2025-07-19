@@ -92,7 +92,7 @@ const ContactUs = () => {
 
   // page hero
   const breadcrumbs = [
-    { label: "Home", href: "/" },
+    { label: "হোম", href: "/" },
     { label: "যোগাযোগ" }, 
   ]
 

@@ -3,7 +3,7 @@ import PageHero from "../../components/helpingComp/PageHero";
 export default function RefundsPolicy() {
     // page hero
   const breadcrumbs = [
-    { label: "Home", href: "/" },
+    { label: "হোম", href: "/" },
     { label: "Refunds Policy" }, 
   ]
   return (

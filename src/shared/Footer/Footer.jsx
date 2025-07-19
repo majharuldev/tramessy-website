@@ -280,7 +280,7 @@ export default function FooterSection() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200"onClick={() =>
+                  <Link to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200" onClick={() =>
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }>
                     {link.name}
@@ -297,11 +297,15 @@ export default function FooterSection() {
               {institutionLinks.map((link, index) => (
                 <li key={index}>
                  { link.type === "section" ? (
-                   <HashLink smooth to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200">
+                   <HashLink smooth to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200" onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }>
                     {link.name}
                   </HashLink>
                  )
-                 :( <Link to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200">
+                 :( <Link to={link.path} className="text-sm opacity-90 hover:text-teal-500 transition-colors duration-200" onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }>
                     {link.name}
                   </Link>)}
                 </li>
@@ -316,7 +320,7 @@ export default function FooterSection() {
             <div className="space-y-4 mb-8 text-sm">
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-teal-500" />
-                <p>bmstechlogistics@gmail.com</p>
+                <p>info@tramessy.com</p>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-teal-500" />
@@ -349,10 +353,12 @@ export default function FooterSection() {
                 placeholder="আপনার ইমেইল"
                 className="flex-1 px-4 py-3 rounded-l-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 required
+                disabled
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-primary hover:bg-primary/80 rounded-r-lg transition-colors duration-200"
+                className="px-6 py-3 bg-primary hover:bg-primary/80 rounded-r-lg transition-colors duration-200 disabled:cursor-not-allowed"
+                disabled
               >
                 <Send className="w-5 h-5" />
               </button>

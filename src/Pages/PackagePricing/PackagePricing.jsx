@@ -77,7 +77,7 @@ const PackagePricing = () => {
     {
       title: 'বেসিক',
       subtitle: 'ছোট ট্রান্সপোর্ট ব্যবসা, নতুন উদ্যোক্তা, স্টার্টআপ',
-      price: '১,৫০০৳',
+      price: '১,৪৯৯৳',
       period: 'মাস',
       icon: <Truck className="h-6 w-6" />,
       gradient: 'from-green-400 to-green-600',
@@ -153,7 +153,7 @@ const PackagePricing = () => {
     },
   ];
   const [sectionRef, isSectionInView] = useInView({ threshold: 0.1 })
-  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "প্যাকেজ এবং প্রাইস" }]
+  const breadcrumbs = [{ label: "হোম", href: "/" }, { label: "প্যাকেজ এবং প্রাইস" }]
   return (
     <section className="bg-gray-50">
       <PageHero title="প্যাকেজ এবং প্রাইস" breadcrumbs={breadcrumbs} />

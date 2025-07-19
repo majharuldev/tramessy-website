@@ -8,9 +8,9 @@ const FeatureCard = ({ iconName, title, description, linkText = "আরো প�
       <div className="mb-4">{IconComponent && <IconComponent className="w-10 h-10 text-feature-icon text-primary" />}</div>
       <h3 className="text-xl font-semibold text-gray-800 mb-3">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">{description}</p>
-      <a href={linkHref} className="text-feature-link font-medium hover:underline text-sm text-primary">
+      {/* <a href={linkHref} className="text-feature-link font-medium hover:underline text-sm text-primary">
         {linkText}
-      </a>
+      </a> */}
     </div>
   )
 }

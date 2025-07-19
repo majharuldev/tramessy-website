@@ -211,9 +211,9 @@ export default function ChooseEdufy() {
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-3">{item.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.description}</p>
-              <a href="#" className="text-teal-500 text-sm font-medium hover:text-teal-600">
+              {/* <a href="#" className="text-teal-500 text-sm font-medium hover:text-teal-600">
                 আরো পড়ুন
-              </a>
+              </a> */}
             </div>
           )
         })}

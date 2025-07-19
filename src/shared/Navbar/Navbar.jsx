@@ -211,9 +211,11 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
+            <Link to="/contact-us">
             <button className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
               ডেমো রিকুয়েস্ট
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -240,9 +242,10 @@ export default function Navbar() {
         </button>
       ))}
               
+               <Link to="/contact-us">
                <button className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
               ডেমো রিকুয়েস্ট
-            </button>
+            </button></Link>
             </nav>
           </div>
         </div>
