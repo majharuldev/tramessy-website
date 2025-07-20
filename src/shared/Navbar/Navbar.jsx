@@ -128,7 +128,7 @@
 
 
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronDown, Menu, X } from "lucide-react"
 import logo from "../../assets/logo.svg"
 import { Link, useLocation, useNavigate } from "react-router-dom"
@@ -138,6 +138,8 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
+  const mobileMenuRef = useRef(null) // Create a ref for the mobile menu container
+  const menuButtonRef = useRef(null)
 
   const navItems = [
   { name: "হোম", href: "/", type: "link" },
@@ -177,9 +179,48 @@ export default function Navbar() {
         }, 500); // ডিলে দিতে হবে যাতে হোমে যাওয়ার সময় স্ক্রল মিস না হয়
       }
     } else {
-      navigate(item.href);
-    }
+    navigate(item.href);
+    // স্ক্রল টপে যাও
+    window.scrollTo(0, 0);
+  }
+  setIsMenuOpen(false)
   };
+
+  const handleCtaClick = () => {
+    navigate("/contact-us")
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 0)
+    setIsMenuOpen(false) // Close mobile menu if open
+  }
+
+  // Effect to handle clicks outside the mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // If menu is open and the click is not on the menu itself
+      // and not on the button that opens/closes the menu
+      if (
+        isMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    // Add event listener when menu is open
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    }
+
+    // Clean up event listener when component unmounts or menu closes
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [isMenuOpen]) // Re-run effect when isMenuOpen changes
+
 
   return (
     <header
@@ -211,15 +252,15 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link to="/contact-us">
-            <button className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
+            {/* <Link to="/contact-us"> */}
+            <button onClick={handleCtaClick} className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
               ডেমো রিকুয়েস্ট
             </button>
-            </Link>
+            {/* </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button ref={menuButtonRef} className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -227,7 +268,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t shadow-lg">
+        <div ref={mobileMenuRef} className="lg:hidden bg-white border-t shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
              {navItems.map((item, index) => (
@@ -242,10 +283,12 @@ export default function Navbar() {
         </button>
       ))}
               
-               <Link to="/contact-us">
-               <button className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
+               {/* <Link to="/contact-us"> */}
+               <button onClick={handleCtaClick}
+   className="bg-primary hover:bg-primary/80 text-white px-4 py-2 rounded-lg transition-all duration-300 font-medium transform hover:scale-105">
               ডেমো রিকুয়েস্ট
-            </button></Link>
+            </button>
+            {/* </Link> */}
             </nav>
           </div>
         </div>

@@ -39,7 +39,6 @@ const AboutTramessySection = () => {
             src={tramessyTeam || "/placeholder.svg?height=400&width=600"}
             alt="Tramessy team working"
             className="max-w-full h-auto object-contain rounded-lg shadow-lg"
-            style={{ maxWidth: "600px" }}
           />
         </div>
       </div>

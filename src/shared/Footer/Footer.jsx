@@ -223,6 +223,7 @@ import carBg from "../../assets/image/carBg.jpeg"
 import whiteLogo from "../../assets/logo-2.svg"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
+import basis from "../../assets/logo/basis.webp"
 
 const quickLinks = [
   { name: "Tramessy সম্পর্কে", path: "/about-us" },
@@ -271,6 +272,10 @@ export default function FooterSection() {
             <div className="space-y-4 text-sm leading-relaxed opacity-90">
               Tramessy সফটওয়্যারটি ট্রানসপোর্ট ব্যবসার এর আধুনিকায়নের কথা মাথায় রেখে এমন ভাবে ডিজাইন করা হয়েছে যেনো যেকোন ট্রানসপোর্ট ব্যবসায়ী তাদের দৈনন্দিন কার্যক্রম সহজেই এবং কম সময়ে পরিচালনা করতে পারেন 
               <p className="pt-4 border-t border-white/20">হটলাইন: 09666700722</p>
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-sm ">Member Of:</h1>
+              <img src={basis} alt="Basis" className="w-28 rounded" />
             </div>
           </div>
 
@@ -344,7 +349,7 @@ export default function FooterSection() {
             </div>
 
             {/* Newsletter */}
-            <p className="text-sm mb-4">বিশেষ অফার ও আপডেট পেতে আমাদের সঙ্গে থাকুন।</p>
+            {/* <p className="text-sm mb-4">বিশেষ অফার ও আপডেট পেতে আমাদের সঙ্গে থাকুন।</p>
             <form onSubmit={handleEmailSubmit} className="flex">
               <input
                 type="email"
@@ -362,7 +367,7 @@ export default function FooterSection() {
               >
                 <Send className="w-5 h-5" />
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>

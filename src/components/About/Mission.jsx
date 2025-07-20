@@ -33,7 +33,6 @@ const MissionSection = () => {
             src={missionImg || "/placeholder.svg?height=300&width=400"}
             alt="Mission illustration"
             className="max-w-full h-auto object-contain rounded-lg"
-            style={{ maxWidth: "600px" }}
           />
         </div>
       </div>

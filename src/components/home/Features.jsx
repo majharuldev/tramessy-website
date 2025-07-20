@@ -318,7 +318,7 @@ const featureData = {
         </div>
 
       </div>
-      <div className="bg-teal-50">
+      <div className="bg-blue-50">
         {/* Content Grid */}
         <div ref={sectionRef} className="container mx-auto grid lg:grid-cols-3 gap-5 items-start py-16">
           {/* Features Grid */}

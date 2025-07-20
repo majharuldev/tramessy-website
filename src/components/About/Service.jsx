@@ -46,7 +46,7 @@ const ServicesSection = () => {
             src={service || "/placeholder.svg?height=300&width=400"}
             alt="Services illustration"
             className="max-w-full h-auto object-contain rounded-lg"
-            style={{ maxWidth: "600px" }}
+            // style={{ maxWidth: "600px" }}
           />
         </div>
       </div>

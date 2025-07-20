@@ -307,8 +307,8 @@ const FeaturesSection = () => {
       <img
         src={img}
         alt="Tramessy web portal screenshot"
-        className="max-w-full h-auto object-contain rounded-lg shadow-lg"
-        style={{ maxWidth: "500px" }}
+        className="w-full  h-auto object-contain rounded-lg shadow-lg"
+       
       />
     </div>
   </div>

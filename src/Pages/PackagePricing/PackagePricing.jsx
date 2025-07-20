@@ -104,10 +104,10 @@ const PackagePricing = () => {
       isPopular: true,
       features: [
         { text: '৫ থেকে ১০টি গাড়ি ম্যানেজমেন্ট', included: true },
-        { text: 'অ্যাডভান্সড ট্রিপ ও রুট ম্যানেজমেন্ট', included: true },
+        { text: 'অ্যাডভান্সড ট্রিপ ও ম্যানেজমেন্ট', included: true },
         { text: 'ফুয়েল ট্র্যাকিং ও খরচ বিশ্লেষণ', included: true },
         { text: 'চালক ও স্টাফদের বেতন ও কমিশন হিসাব', included: true },
-        { text: 'রিপোর্ট ডাউনলোড (PDF, Excel)', included: true },
+        { text: 'রিপোর্ট ডাউনলোড (CVS, PDF, Excel, Print)', included: true },
         { text: 'SMS/Email নোটিফিকেশন সিস্টেম', included: true },
         { text: 'মাল্টি-ইউজার এক্সেস (৩ জন পর্যন্ত)', included: true },
         { text: 'GPS রিয়েল-টাইম ট্র্যাকিং', included: false },
@@ -116,7 +116,7 @@ const PackagePricing = () => {
     {
       title: 'প্রো প্ল্যান',
       subtitle: 'বড় আকারের ট্রান্সপোর্ট ব্যবসা',
-      price: '4999৳',
+      price: '৪,৯৯৯৳',
       period: 'মাস',
       icon: <Crown className="h-6 w-6" />,
       gradient: 'from-purple-500 to-pink-600',
@@ -124,10 +124,11 @@ const PackagePricing = () => {
       features: [
         { text: '১০-২০টি গাড়ি ম্যানেজমেন্ট', included: true },
         { text: 'GPS রিয়েল-টাইম ট্র্যাকিং ও লাইভ মনিটরিং', included: true },
-        { text: 'কাস্টমাইজড ট্রিপ রুট অপ্টিমাইজেশন', included: true },
+        // { text: 'কাস্টমাইজড ট্রিপ রুট অপ্টিমাইজেশন', included: true },
         { text: 'অটোমেটেড ভেহিকেল মেইনটেন্যান্স নোটিফিকেশন', included: true },
         { text: 'কাস্টমাইজড রিপোর্টিং ও বিশ্লেষণ', included: true },
         { text: 'পার্টনার ও ক্লায়েন্ট ম্যানেজমেন্ট', included: true },
+        { text: 'রিপোর্ট ডাউনলোড (CVS, PDF, Excel, Print)', included: true },
         { text: 'মাল্টি-ইউজার এক্সেস (১০ জন পর্যন্ত)', included: true },
         { text: 'ডেডিকেটেড একাউন্ট ম্যানেজার ও লাইভ সাপোর্ট', included: false },
       ]
@@ -143,9 +144,10 @@ const PackagePricing = () => {
       features: [
         { text: '২০-৫০টি গাড়ি ম্যানেজমেন্ট', included: true },
         { text: 'GPS রিয়েল-টাইম ট্র্যাকিং ও লাইভ মনিটরিং', included: true },
-        { text: 'কাস্টমাইজড ট্রিপ রুট অপ্টিমাইজেশন', included: true },
+        // { text: 'কাস্টমাইজড ট্রিপ রুট অপ্টিমাইজেশন', included: true },
         { text: 'অটোমেটেড ভেহিকেল মেইনটেন্যান্স নোটিফিকেশন', included: true },
         { text: 'কাস্টমাইজড রিপোর্টিং ও বিশ্লেষণ', included: true },
+        { text: 'রিপোর্ট ডাউনলোড (CVS, PDF, Excel, Print)', included: true },
         { text: 'পার্টনার ও ক্লায়েন্ট ম্যানেজমেন্ট', included: true },
         { text: 'মাল্টি-ইউজার এক্সেস (১০ জন পর্যন্ত)', included: true },
         { text: 'ডেডিকেটেড একাউন্ট ম্যানেজার ও লাইভ সাপোর্ট', included: true },

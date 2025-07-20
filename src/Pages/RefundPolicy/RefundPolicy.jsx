@@ -115,7 +115,7 @@ export default function RefundsPolicy() {
         <p className="mb-4">If you have any questions about our Refunds Policy, please contact us:</p>
         <ul className="list-disc list-inside ml-4">
           <li>By email: support@tramessy.com</li>
-          <li>By visiting this page on our website: [Your Contact Page URL]</li>
+          {/* <li>By visiting this page on our website: [Your Contact Page URL]</li> */}
         </ul>
       </section>
       </div>

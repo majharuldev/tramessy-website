@@ -28,7 +28,7 @@ const TechnologySection = () => {
             {list.map((item, index) => (
               <li
                 key={index}
-                className={`flex items-start gap-2 ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`}
+                className={`flex items-start gap-2 ${isSectionInView ? "animate-fade-in-right" :  (window.innerWidth < 768 ? "opacity-100" : "opacity-0")}`}
                 style={{ animationDelay: isSectionInView ? `${0.4 + index * 0.1}s` : "0s" }}
               >
                 <CheckCircle className="w-6 h-6 text-feature-icon flex-shrink-0 mt-1" />
@@ -46,7 +46,7 @@ const TechnologySection = () => {
             src={technology || "/placeholder.svg?height=300&width=400"}
             alt="Technology illustration"
             className="max-w-full h-auto object-contain rounded-lg"
-            style={{ maxWidth: "600px" }}
+            // style={{ maxWidth: "600px" }}
           />
         </div>
       </div>
