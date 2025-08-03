@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     { label: "Privacy Policy" }, 
   ]
   return (
-    <main className=" py-8 md:py-12 ">
+    <main className=" ">
         <PageHero title={"Privacy Policy"} breadcrumbs={breadcrumbs}/>
       <div className="max-w-4xl mx-auto shadow-lg rounded-lg p-5 ">
       <div className="flex justify-between items-center mb-6">

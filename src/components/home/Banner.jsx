@@ -190,6 +190,7 @@ import dekstopImage from "../../assets/image/truck-seba-dash-dekstop.png"
 import smallImage from "../../assets/image/mobile.png"
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "../../shared/hooks/UseInView";
+import { Link } from "react-router-dom";
 
 export default function Banner() {
   const imageRef = useRef(null);
@@ -236,9 +237,9 @@ export default function Banner() {
           <div ref={sectionRef} className="text-white space-y-8 animate-fade-in-up md:w-[50%]">
             <h1 className={`text-2xl lg:text-4xl font-bold leading-tight ${isSectionInView ? "animate-fade-in-left" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>{heroContent.title}</h1>
 
-            <p className={`text-sm lg:text-md text-white/90 leading-relaxed ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>{heroContent.description}</p>
+            <p className={` text-sm lg:text-md text-white/90 leading-relaxed ${isSectionInView ? "animate-fade-in-right" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }}>{heroContent.description}</p>
 
-            <button className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-lg text-sm text-md font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2 group">
+            <Link to="/contact-us" className="mt-6 block"><button className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-3 rounded-lg text-sm text-md font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center space-x-2 group">
               <span>{heroContent.ctaText}</span>
               <svg
                 className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
@@ -248,7 +249,7 @@ export default function Banner() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
+            </button></Link>
           </div>
 
           {/* Right Content - Image */}
