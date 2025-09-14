@@ -13,10 +13,22 @@ const PricingCard = ({
   buttonText, 
   gradient,
   icon ,
-  isSectionInView
+  isSectionInView,
+  badge
 }) => {
   return (
-    <div className={`relative overflow-hidden rounded-lg border bg-white text-gray-900 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+    <div className="relative">
+      {badge && (
+        // <span className="absolute top-4 right-0 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded">
+        //   {badge}
+        // </span>
+        <span className="absolute top-6 -right-2 z-10 rounded-l bg-green-500 text-white text-xs font-bold px-3 py-1 shadow-md">
+ {badge}
+  <span className="absolute right-0 top-full border-t-8 border-l-8 border-l-green-500 border-t-transparent rotate-90"></span>
+</span>
+
+      )}
+      <div className={`relative overflow-hidden rounded-lg border bg-white text-gray-900 shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
       isPopular 
         ? 'border-2 border-primary shadow-xl' 
         : 'border border-gray-200 hover:border-primary/60'
@@ -30,6 +42,7 @@ const PricingCard = ({
       <div className={`h-2 ${gradient}`} />
       
       <div className={`text-center ${isPopular ? 'pt-8' : 'pt-6'} flex flex-col space-y-1.5 p-6`}>
+        
         <div className="flex justify-center mb-4">
           <div className={`p-3 rounded-full bg-gradient-to-r ${gradient} text-white`}>
             {icon}
@@ -42,7 +55,7 @@ const PricingCard = ({
         )}
         
         <div className="mt-4">
-          <span className="text-4xl font-bold text-gray-900">{price}</span>
+          <span className="text-4xl font-bold text-gray-900">{price}৳</span>
           <span className="text-gray-600 ml-1">/ {period}</span>
         </div>
       </div>
@@ -75,6 +88,7 @@ const PricingCard = ({
         </Button>
         </Link>
       </div>
+    </div>
     </div>
   );
 };

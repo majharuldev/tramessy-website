@@ -3,14 +3,18 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
-
 import nalitabari from "../../assets/logo/nalitabari-logo.png"
 import truckSeba from "../../assets/logo/truck-seba-logo.jpg"
 import hkLogistices from "../../assets/logo/hk-logistics-logo.jpg"
 import bus from "../../assets/logo/bus-logo.png"
 import parkline from "../../assets/logo/parkline-logo.png"
 import laksham from "../../assets/logo/laksham.png"
+import AjEnter from "../../assets/logo/AJ_Logo.png"
+import sls from "../../assets/logo/sls-logo-favicon.webp"
+import asif from "../../assets/logo/asif.jpg"
+import opu from "../../assets/logo/opu.jpg"
 import { useInView } from "../../shared/hooks/UseInView"
+import noImage from "../../assets/logo/download.png"
 
 const company = [
   {
@@ -36,43 +40,51 @@ const company = [
   },
   {
     id: 4,
-    name: "Laksham",
+    name: "Laksham Poribohon",
     logo: laksham,
     bgColor: "bg-gray-900",
     borderColor: "border-gray-700",
   },
   {
     id: 5,
-    name: "Nalitabari",
-    logo: nalitabari,
+    name: "Opu Enterprise",
+    logo: opu,
     bgColor: "bg-green-600",
     borderColor: "border-green-400",
   },
+
   {
     id: 6,
-    name: "Truck Seba",
-    logo: truckSeba,
-    bgColor: "bg-orange-500",
-    borderColor: "border-orange-300",
-  },
-  {
-    id: 7,
-    name: "HK Logistices",
-    logo: hkLogistices,
-    bgColor: "bg-white",
-    borderColor: "border-blue-500",
-  },
-  {
-    id: 8,
     name: "Parkline",
     logo: parkline,
     bgColor: "bg-gray-900",
     borderColor: "border-gray-700",
   },
   {
+    id: 7,
+    name: "Asif International",
+    logo: asif,
+    bgColor: "bg-gray-900",
+    borderColor: "border-gray-700",
+  },
+   {
+    id: 8,
+    name: "AJ Enterprise",
+    logo: AjEnter,
+    bgColor: "bg-gray-900",
+    borderColor: "border-gray-700",
+  },
+  {
     id: 9,
-    name: "Fun Bird",
-    logo: bus,
+    name: "SLS",
+    logo: sls,
+    bgColor: "bg-gray-900",
+    borderColor: "border-gray-700",
+  },
+    {
+    id: 10,
+    name: "Rony Transport",
+    logo: noImage,
     bgColor: "bg-gray-900",
     borderColor: "border-gray-700",
   },
@@ -85,7 +97,7 @@ export default function ClientList() {
       {/* Main Heading */}
       <div ref={sectionRef} className="text-center mb-12">
         <h2 className={`text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 leading-snug ${isSectionInView ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: isSectionInView ? "0.2s" : "0s" }} >
-          বাংলাদেশের 15+ প্রতিষ্ঠান তাদের প্রতিষ্ঠান <br />
+          বাংলাদেশের যেসব প্রতিষ্ঠান তাদের প্রতিষ্ঠান <br />
           পরিচালনার জন্য নিয়মিত ব্যবহার করছে{" "}
           <span className="text-primary">Tramessy</span>
         </h2>

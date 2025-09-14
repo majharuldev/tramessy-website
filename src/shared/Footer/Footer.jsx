@@ -223,7 +223,7 @@ import carBg from "../../assets/image/carBg.jpeg"
 import whiteLogo from "../../assets/logo-2.svg"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
-import basis from "../../assets/logo/basis.webp"
+import bms from "../../assets/logo/BMS Tech o.png"
 
 const quickLinks = [
   { name: "Tramessy সম্পর্কে", path: "/about-us" },
@@ -262,7 +262,7 @@ export default function FooterSection() {
     >
       {/* Overlay Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-8">
 
           {/* Company Info */}
           <div>
@@ -274,8 +274,13 @@ export default function FooterSection() {
               <p className="pt-4 border-t border-white/20">হটলাইন: 09666700722</p>
             </div>
             <div className="space-y-2">
-              <h1 className="text-sm ">Member Of:</h1>
-              <img src={basis} alt="Basis" className="w-28 rounded" />
+              <h1 className="text-sm ">A Product Of:</h1>
+              <img src={bms} alt="Basis" className="w-28 rounded" />
+              <div className="text-sm">
+                <p>Trade License No. TRAD/DNCC/009194/2022</p>
+                <p>TIN No. 341194158241</p>
+                <p>VAT Reg. No. 0050990580101</p>
+              </div>
             </div>
           </div>
 
