@@ -224,6 +224,7 @@ import whiteLogo from "../../assets/logo-2.svg"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import bms from "../../assets/logo/BMS Tech o.png"
+import basis from "../../assets/logo/basis.webp"
 
 const quickLinks = [
   { name: "Tramessy সম্পর্কে", path: "/about-us" },
@@ -274,8 +275,16 @@ export default function FooterSection() {
               <p className="pt-4 border-t border-white/20">হটলাইন: 09666700722</p>
             </div>
             <div className="space-y-2">
-              <h1 className="text-sm ">A Product Of:</h1>
+              <div className="flex items-center gap-5">
+                <div>
+                  <h1 className="text-sm ">A Product Of:</h1>
               <img src={bms} alt="Basis" className="w-28 rounded" />
+                </div>
+                <div>
+                  <h1 className="text-sm ">Member Of:</h1>
+                  <img src={basis} alt="" className="w-28 rounded" />
+                </div>
+              </div>
               <div className="text-sm">
                 <p>Trade License No. TRAD/DNCC/009194/2022</p>
                 <p>TIN No. 341194158241</p>

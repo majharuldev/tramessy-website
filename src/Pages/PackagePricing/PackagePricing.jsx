@@ -209,7 +209,7 @@ const calculateDiscountedPrice = (price) => {
             return <PricingCard
               key={index}
               title={plan.title}
-              subtitle={plan.subtitle}
+              subtitle={plan.subtitle}X
               // price={plan.price}
               // period={plan.period}
               badge={badge}
