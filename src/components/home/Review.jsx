@@ -8,6 +8,9 @@ import "swiper/css/pagination"
 import clientImage1 from "../../assets/image/MH.png"
 import clientImage2 from "../../assets/image/mohammed_jayed_hassan.jpg"
 import clientImageMostakFahad from "../../assets/image/rent-e-car.jpeg"
+import clientSahajan from "../../assets/image/sahjan-image.png"
+import clientAbid from "../../assets/image/abid.png"
+import clientOvi from "../../assets/image/Afjal-image.jpg"
 import { useInView } from "../../shared/hooks/UseInView"
 const testimonials = [
   {
@@ -49,6 +52,30 @@ const testimonials = [
     image: clientImageMostakFahad,
     testimonial:
       "আমি রেন্ট-এ-কার ব্যবসা করি। আগে হিসাব রাখতে অনেক কষ্ট হতো -কোন গাড়ি কোথায়, কত ইনকাম, কত খরচ সব মনে রাখা কঠিন ছিল। এখন ট্রামেসি ব্যবহার করছি। সব কিছু এক জায়গায় পাই। বুকিং, ড্রাইভার, ইনকাম-খরচ, সব হিসাব এখন মোবাইলে দেখি। অনেক সুবিধা হচ্ছে ধন্যবাদ ট্রামেসি টিমকে!",
+  },
+   {
+    id: 6,
+    name: "মোঃ শাহ জাহান",
+    designation: "ভাই ভাই এন্ট্রাপ্রাইজ, চট্টগ্রাম।",
+    image: clientSahajan,
+    testimonial:
+      "ট্রামেসি ব্যবহার করার পর থেকে আমার কাজের ধরনই বদলে গেছে। আগে যেখানে হিসাব ও রিপোর্ট তৈরি করতে অনেক সময় লাগত, এখন সবকিছু কয়েক ক্লিকেই হয়ে যায়। এক কথায়, ব্যবসা পরিচালনায় ট্রামেসি আমার সবচেয়ে বড় সহায়ক!",
+  },
+    {
+    id: 7,
+    name: "মোঃ আবিদ হাসান",
+    designation: "এম এস এম ট্রেডার্স, শেরপুর।",
+    image: clientAbid,
+    testimonial:
+      "ট্রামেসি ব্যবহার করে আমি সত্যিই মুগ্ধ। এর সহজ ইন্টারফেস আর স্মার্ট ফিচারগুলো আমার পুরো টিমের কাজের গতি অনেক বাড়িয়ে দিয়েছে। এখন ব্যবসার প্রতিটি দিক নিয়ন্ত্রণ করা অনেক সহজ ও সময়সাশ্রয়ী!",
+  },
+  {
+    id: 8,
+    name: "ইঞ্জিনিয়ার অভি আহমেদ",
+    designation: "আফজাল ট্রান্সপোর্ট, মিরপুর, ঢাকা।",
+    image: clientOvi,
+    testimonial:
+      "ট্রামেসি সত্যিই অসাধারণ সফটওয়্যার। এখানে সবকিছু এত সহজ ও স্মার্টভাবে সাজানো যে আমার ব্যবসা পরিচালনা অনেক বেশি দ্রুত ও ঝামেলাহীন হয়েছে!",
   },
 ]
 
